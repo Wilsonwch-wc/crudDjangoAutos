@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registrar Auto</title>
+</head>
+<body>
+    <h1>Registrar Auto</h1>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <label for="marca">Marca:</label><br>
+        <select id="marca" name="marca" required>
+            {% for marca in marcas %}
+                <option value="{{ marca.id }}">{{ marca.nombre }}</option>
+            {% endfor %}
+        </select><br><br>
+
+        <label for="modelo">Modelo:</label><br>
+        <input type="text" id="modelo" name="modelo" required><br><br>
+
+        <label for="año">Año:</label><br>
+        <input type="number" id="año" name="año" required><br><br>
+
+        <label for="precio">Precio:</label><br>
+        <input type="number" step="0.01" id="precio" name="precio" required><br><br>
+
+        <label for="descripcion">Descripción:</label><br>
+        <textarea id="descripcion" name="descripcion" required></textarea><br><br>
+
+        <label for="imagen">Imagen:</label><br>
+        <input type="file" id="imagen" name="imagen"><br><br>
+
+        <button type="submit">Registrar</button>
+    </form>
+</body>
+</html>

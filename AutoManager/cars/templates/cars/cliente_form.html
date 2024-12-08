@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registrar Cliente</title>
+</head>
+<body>
+    <h1>Registrar Cliente</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label for="nombre">Nombre:</label><br>
+        <input type="text" id="nombre" name="nombre" required><br><br>
+
+        <label for="correo">Correo:</label><br>
+        <input type="email" id="correo" name="correo" required><br><br>
+
+        <label for="telefono">Teléfono:</label><br>
+        <input type="text" id="telefono" name="telefono" required><br><br>
+
+        <button type="submit">Registrar</button>
+    </form>
+</body>
+</html>
