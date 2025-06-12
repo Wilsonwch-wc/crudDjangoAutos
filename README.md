@@ -1,4 +1,4 @@
-
+# CODIGO mapeo.py y pagerank.py
 # Aplicación del algoritmo PageRank
 
 El algoritmo PageRank se utiliza para medir la importancia relativa de cada nodo en un grafo dirigido. Para implementarlo, necesitamos construir un grafo donde los nodos representan entidades (sucursales, conductores, clientes) y las aristas representan las relaciones entre ellas (en este caso, las encomiendas que pasan de una sucursal a un conductor y luego de un conductor a un cliente).
